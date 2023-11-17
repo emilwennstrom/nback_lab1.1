@@ -1,5 +1,10 @@
 # ninja log v5
-0	54	1692973958521865491	CMakeFiles/nback_cimpl.dir/nback.c.o	1adf92d744aa288f
-0	54	1692973958522422990	CMakeFiles/JniBridge.dir/JniBridge.c.o	5a169ce8c6cdadc8
-54	82	1692973958549904830	/Users/yeetivity/Documents/2023/kth-mobappdev/android-dev/nback_skeletoncode_example/app/build/intermediates/cxx/Debug/3e01z3q1/obj/arm64-v8a/libnback_cimpl.so	2d797c4251f6f674
-82	117	1692973958584603859	/Users/yeetivity/Documents/2023/kth-mobappdev/android-dev/nback_skeletoncode_example/app/build/intermediates/cxx/Debug/3e01z3q1/obj/arm64-v8a/libJniBridge.so	10fbdcc7e495b323
+36	888	7218590838832454	CMakeFiles/nback_cimpl.dir/nback.c.o	f77bf0c6ec911862
+1614	1791	7218590848093399	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/arm64-v8a/libJniBridge.so	bdb64ae4640685fd
+48	933	7218590839205955	CMakeFiles/JniBridge.dir/JniBridge.c.o	96db696c357b9544
+890	1614	7218590846417207	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/arm64-v8a/libnback_cimpl.so	ed1c45ab90f6ae6c
+0	16	0	clean	d9b65c26bebc234b
+3	629	7219439751983198	CMakeFiles/nback_cimpl.dir/nback.c.o	f77bf0c6ec911862
+20	648	7219439751983198	CMakeFiles/JniBridge.dir/JniBridge.c.o	96db696c357b9544
+630	995	7219439755689954	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/arm64-v8a/libnback_cimpl.so	ed1c45ab90f6ae6c
+996	1096	7219439756694106	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/arm64-v8a/libJniBridge.so	bdb64ae4640685fd

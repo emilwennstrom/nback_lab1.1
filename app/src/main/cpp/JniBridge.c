@@ -6,7 +6,8 @@
 JNIEXPORT jintArray JNICALL
 Java_mobappdev_example_nback_1cimpl_NBackHelper_createNBackString(JNIEnv *env, jobject this,
                                                                   jint size, jint combinations,
-                                                                  jint matchPercentage, jint nBack) {
+                                                                  jint matchPercentage,
+                                                                  jint nBack) {
     Nback s1;
     s1 = create(size, combinations, matchPercentage, nBack);
 

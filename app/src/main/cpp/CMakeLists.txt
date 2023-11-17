@@ -28,11 +28,11 @@ project("nback_cimpl")
 add_library(${CMAKE_PROJECT_NAME} SHARED nback.c)
 add_library(JniBridge SHARED JniBridge.c)
 
-find_library(log-lib log )
+find_library(log-lib log)
 
 # Specifies libraries CMake should link to your target library. You
 # can link libraries from various origins, such as libraries defined in this
 # build script, prebuilt third-party libraries, or Android system libraries.
 
-target_link_libraries(${CMAKE_PROJECT_NAME} ${log-lib} )
+target_link_libraries(${CMAKE_PROJECT_NAME} ${log-lib})
 target_link_libraries(JniBridge PRIVATE ${CMAKE_PROJECT_NAME})

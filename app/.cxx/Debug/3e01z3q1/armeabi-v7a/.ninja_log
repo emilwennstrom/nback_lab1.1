@@ -1,0 +1,31 @@
+# ninja log v5
+1	133	7216560860967982	CMakeFiles/nback_cimpl.dir/nback.c.o	d6c7f4971ed813a
+5	149	7216560860967982	CMakeFiles/JniBridge.dir/JniBridge.c.o	95210a0141b0e2ff
+134	233	7216560862066158	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/armeabi-v7a/libnback_cimpl.so	85ef1b02fb228e6c
+234	322	7216560862851565	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/armeabi-v7a/libJniBridge.so	237d4c224d1d0dea
+1	16	0	clean	d9b65c26bebc234b
+0	8	0	clean	d9b65c26bebc234b
+4	324	7218495431041952	CMakeFiles/nback_cimpl.dir/nback.c.o	d6c7f4971ed813a
+10	352	7218495431051990	CMakeFiles/JniBridge.dir/JniBridge.c.o	95210a0141b0e2ff
+325	711	7218495434043684	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/armeabi-v7a/libnback_cimpl.so	85ef1b02fb228e6c
+734	1023	7218495438068506	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/armeabi-v7a/libJniBridge.so	237d4c224d1d0dea
+0	12	0	clean	d9b65c26bebc234b
+2	144	7218496987140916	CMakeFiles/nback_cimpl.dir/nback.c.o	d6c7f4971ed813a
+7	160	7218496987150949	CMakeFiles/JniBridge.dir/JniBridge.c.o	95210a0141b0e2ff
+145	241	7218496988133251	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/armeabi-v7a/libnback_cimpl.so	85ef1b02fb228e6c
+241	553	7218496991177121	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/armeabi-v7a/libJniBridge.so	237d4c224d1d0dea
+0	11	0	clean	d9b65c26bebc234b
+5	168	7218526609892497	CMakeFiles/nback_cimpl.dir/nback.c.o	d6c7f4971ed813a
+12	228	7218526609902457	CMakeFiles/JniBridge.dir/JniBridge.c.o	95210a0141b0e2ff
+169	568	7218526613887139	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/armeabi-v7a/libnback_cimpl.so	85ef1b02fb228e6c
+568	684	7218526615076520	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/armeabi-v7a/libJniBridge.so	237d4c224d1d0dea
+0	11	0	clean	d9b65c26bebc234b
+3	406	7218575608732971	CMakeFiles/nback_cimpl.dir/nback.c.o	d6c7f4971ed813a
+10	422	7218575608783141	CMakeFiles/JniBridge.dir/JniBridge.c.o	95210a0141b0e2ff
+407	574	7218575610464684	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/armeabi-v7a/libnback_cimpl.so	85ef1b02fb228e6c
+574	863	7218575613348090	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/armeabi-v7a/libJniBridge.so	237d4c224d1d0dea
+0	11	0	clean	d9b65c26bebc234b
+5	250	7218590852493765	CMakeFiles/nback_cimpl.dir/nback.c.o	d6c7f4971ed813a
+10	336	7218590852901389	CMakeFiles/JniBridge.dir/JniBridge.c.o	95210a0141b0e2ff
+251	490	7218590854956192	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/armeabi-v7a/libnback_cimpl.so	85ef1b02fb228e6c
+491	778	7218590857683694	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/armeabi-v7a/libJniBridge.so	237d4c224d1d0dea

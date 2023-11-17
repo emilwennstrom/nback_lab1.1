@@ -1,0 +1,31 @@
+# ninja log v5
+1	269	7216560877713019	CMakeFiles/nback_cimpl.dir/nback.c.o	ee8aeba86a2fc0f1
+6	344	7216560877869277	CMakeFiles/JniBridge.dir/JniBridge.c.o	a3faf195e1fd8294
+271	469	7216560879755698	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/x86/libnback_cimpl.so	9e4f864b83d4491e
+469	559	7216560880697318	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/x86/libJniBridge.so	ff57785e1b9fed3b
+0	12	0	clean	d9b65c26bebc234b
+0	8	0	clean	d9b65c26bebc234b
+8	146	7218495440665334	CMakeFiles/nback_cimpl.dir/nback.c.o	ee8aeba86a2fc0f1
+14	163	7218495440685688	CMakeFiles/JniBridge.dir/JniBridge.c.o	a3faf195e1fd8294
+146	315	7218495442423621	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/x86/libnback_cimpl.so	9e4f864b83d4491e
+315	451	7218495443813726	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/x86/libJniBridge.so	ff57785e1b9fed3b
+0	10	0	clean	d9b65c26bebc234b
+3	175	7218496993400697	CMakeFiles/nback_cimpl.dir/nback.c.o	ee8aeba86a2fc0f1
+9	280	7218496993410690	CMakeFiles/JniBridge.dir/JniBridge.c.o	a3faf195e1fd8294
+176	370	7218496995700092	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/x86/libnback_cimpl.so	9e4f864b83d4491e
+370	478	7218496996723034	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/x86/libJniBridge.so	ff57785e1b9fed3b
+0	12	0	clean	d9b65c26bebc234b
+2	113	7218526616679406	CMakeFiles/nback_cimpl.dir/nback.c.o	ee8aeba86a2fc0f1
+10	128	7218526616699525	CMakeFiles/JniBridge.dir/JniBridge.c.o	a3faf195e1fd8294
+113	212	7218526617739543	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/x86/libnback_cimpl.so	9e4f864b83d4491e
+213	313	7218526618702414	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/x86/libJniBridge.so	ff57785e1b9fed3b
+0	11	0	clean	d9b65c26bebc234b
+10	206	7218575616968266	CMakeFiles/JniBridge.dir/JniBridge.c.o	a3faf195e1fd8294
+4	286	7218575617256940	CMakeFiles/nback_cimpl.dir/nback.c.o	ee8aeba86a2fc0f1
+286	442	7218575619353004	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/x86/libnback_cimpl.so	9e4f864b83d4491e
+443	554	7218575620557734	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/x86/libJniBridge.so	ff57785e1b9fed3b
+0	13	0	clean	d9b65c26bebc234b
+6	255	7218590861090088	CMakeFiles/nback_cimpl.dir/nback.c.o	ee8aeba86a2fc0f1
+13	298	7218590861194819	CMakeFiles/JniBridge.dir/JniBridge.c.o	a3faf195e1fd8294
+256	482	7218590863345401	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/x86/libnback_cimpl.so	9e4f864b83d4491e
+482	656	7218590865045213	C:/GitHub/Mobile Applications/NBack/app/build/intermediates/cxx/Debug/3e01z3q1/obj/x86/libJniBridge.so	ff57785e1b9fed3b
