@@ -292,7 +292,8 @@ class GameVM(
                     Log.d(TAG, "Visual match! $visualQueue")
                 } else {
                     state = -1
-                    _score.value -= 5
+                    if (_score.value >= 5)
+                        _score.value -= 5
                 }
             }
             canMatchVisual = false
@@ -322,7 +323,8 @@ class GameVM(
                     Log.d(TAG, "Audio match! $audioQueue")
                 } else if (_score.value >= 5) {      // Not a match
                     state = -1
-                    _score.value -= 5
+                    if (_score.value >= 5)
+                        _score.value -= 5
                 }
             }
             canMatchAudio = false

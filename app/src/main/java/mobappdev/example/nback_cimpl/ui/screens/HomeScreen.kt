@@ -2,8 +2,10 @@ package mobappdev.example.nback_cimpl.ui.screens
 
 import android.content.res.Configuration
 import android.content.res.Resources.Theme
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -41,6 +43,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -109,14 +112,15 @@ fun PortraitHomeScreen(
             .background(color = MaterialTheme.colorScheme.primary)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = Arrangement.SpaceEvenly
     ) {
 
         Row(
             modifier = modifier
                 .fillMaxWidth()
                 .weight(1F),
-            horizontalArrangement = Arrangement.Center
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
         ) {
             HighScoreText(highScore = vm.highscore.collectAsState())
         }
@@ -128,7 +132,9 @@ fun PortraitHomeScreen(
                 .padding(20.dp)
                 .weight(1F)
         ) {
-            SettingsText(settings, modifier.weight(1F))
+            Column(verticalArrangement = Arrangement.Center, modifier = modifier.fillMaxHeight()) {
+                SettingsText(settings, modifier.weight(1F))
+            }
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center,
@@ -149,28 +155,32 @@ fun PortraitHomeScreen(
             }
         }
 
+
+
         Row(
             modifier = modifier
-                .fillMaxWidth()
-                .weight(1F),
+                .fillMaxSize()
+                .weight(1F)
+                .padding(20.dp),
             horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically
         ) {
 
-            GameModeButtonsWithSwiches(
-                vm.audioGameMode.collectAsState(),
-                vm.visualGameMode.collectAsState(),
-                vm::changeAudioMode,
-                vm::changeVisualMode
-            )
-
-
+            AudioModeButtonWithSwitch(
+                audioGameMode = vm.audioGameMode.collectAsState(),
+                changeAudioMode = vm::changeAudioMode
+                )
+            VisualModeButtonWithSwitch(
+                visualGameMode = vm.visualGameMode.collectAsState(),
+                changeVisualMode = vm::changeVisualMode)
         }
 
 
 
         Row(
-            modifier = modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center
+            modifier = modifier
+                .fillMaxSize(0.9F)
+                .weight(1F), horizontalArrangement = Arrangement.Center
         ) {
 
             StartButton(
@@ -228,8 +238,9 @@ fun LandscapeHomeScreen(
         Column(
             modifier = modifier
                 .weight(1F)
-                .padding(20.dp)
-                .fillMaxSize()
+                .fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             SettingsText(settings = vm.settings.collectAsState().value)
         }
@@ -256,11 +267,16 @@ fun LandscapeHomeScreen(
 
 
         Column(
-            modifier = modifier.weight(3F)
+            modifier = Modifier.weight(3F),
+            verticalArrangement = Arrangement.SpaceEvenly
         ) {
 
             Row(
-                modifier = modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center
+                modifier = Modifier
+                    .weight(1F)
+                    .fillMaxSize(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
             ) {
                 HighScoreText(highScore = vm.highscore.collectAsState())
             }
@@ -268,22 +284,27 @@ fun LandscapeHomeScreen(
             Row(
                 modifier = modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 100.dp)
-                    .padding(top = 50.dp), horizontalArrangement = Arrangement.SpaceEvenly
+                    .weight(1F), horizontalArrangement = Arrangement.SpaceEvenly,
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                GameModeButtonsWithSwiches(
-                    vm.audioGameMode.collectAsState(),
-                    vm.visualGameMode.collectAsState(),
-                    vm::changeAudioMode,
-                    vm::changeVisualMode
+                AudioModeButtonWithSwitch(
+                    audioGameMode = vm.audioGameMode.collectAsState(),
+                    changeAudioMode = vm::changeAudioMode
                 )
-
-
+                
+                VisualModeButtonWithSwitch(
+                    visualGameMode = vm.visualGameMode.collectAsState(),
+                    changeVisualMode = vm::changeVisualMode
+                )
             }
 
 
             Row(
-                modifier = modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center
+                modifier = modifier
+                    .fillMaxSize()
+                    .weight(1F)
+                    .padding(2.dp),
+                horizontalArrangement = Arrangement.Center
             ) {
                 StartButton(
                     vm.audioGameMode.collectAsState(),
@@ -309,10 +330,16 @@ fun LandscapeHomeScreen(
 fun SettingsText(settings: GameSettings, modifier: Modifier = Modifier) {
     val gridSize = settings.gridSize.toString() + " x " + settings.gridSize
     Column(
-        modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center
+        modifier
+            .background(MaterialTheme.colorScheme.onPrimaryContainer)
+            .border(
+                BorderStroke(1.dp, MaterialTheme.colorScheme.onPrimary)
+            )
+            .padding(20.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.Start
     ) {
-        Text(text = "Current settings", style = MaterialTheme.typography.headlineSmall, color = MaterialTheme.colorScheme.onPrimary)
+        Text(text = "Settings", style = MaterialTheme.typography.headlineSmall, color = MaterialTheme.colorScheme.onPrimary)
         Text(text = "NBack: " + settings.nBack, color = MaterialTheme.colorScheme.onPrimary, style = MaterialTheme.typography.bodySmall)
         Text(text = "Events: " + settings.events, color = MaterialTheme.colorScheme.onPrimary, style = MaterialTheme.typography.bodySmall)
         Text(text = "Audio Combinations: " + settings.audioCombinations, color = MaterialTheme.colorScheme.onPrimary, style = MaterialTheme.typography.bodySmall)
@@ -346,24 +373,21 @@ fun SettingsButton(vm: GameViewModel, showSnackBar: (String, SnackbarDuration) -
 @Composable
 fun HighScoreText(highScore: State<Int>) {
     Text(
-        modifier = Modifier.padding(top = 30.dp),
-        text = "Current highscore: ${highScore.value}",
+        text = "Highscore: ${highScore.value}",
         color = MaterialTheme.colorScheme.onPrimary,
         style = MaterialTheme.typography.headlineLarge,
         fontWeight = FontWeight.Bold
     )
 }
 
-@Composable
-fun GameModeButtonsWithSwiches(
-    audioGameMode: State<Boolean>,
-    visualGameMode: State<Boolean>,
-    changeAudioMode: () -> Unit,
-    changeVisualMode: () -> Unit,
 
-    ) {
+@Composable
+fun AudioModeButtonWithSwitch(
+    audioGameMode: State<Boolean>,
+    changeAudioMode: () -> Unit,
+    modifier: Modifier = Modifier
+){
     val audioMode by audioGameMode
-    val visualMode by visualGameMode
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Icon(
             painter = painterResource(id = if (audioMode) R.drawable.hearing_24 else R.drawable.hearing_disabled),
@@ -378,6 +402,15 @@ fun GameModeButtonsWithSwiches(
             uncheckedThumbColor = MaterialTheme.colorScheme.secondary,
             uncheckedTrackColor = MaterialTheme.colorScheme.secondaryContainer))
     }
+}
+
+@Composable
+fun VisualModeButtonWithSwitch (
+    visualGameMode: State<Boolean>,
+    changeVisualMode: () -> Unit,
+    modifier: Modifier = Modifier
+){
+    val visualMode by visualGameMode
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Icon(
             painter = painterResource(id = if (visualMode) R.drawable.visibility else R.drawable.visibility_off),
@@ -395,6 +428,7 @@ fun GameModeButtonsWithSwiches(
     }
 
 }
+
 
 @Composable
 fun StartButton(
@@ -418,13 +452,13 @@ fun StartButton(
         },
         shape = RectangleShape,
         modifier = modifier
-            .padding(20.dp)
             .aspectRatio(2F),
-        colors = ButtonDefaults.buttonColors(MaterialTheme.colorScheme.primaryContainer)
+        colors = ButtonDefaults.buttonColors(MaterialTheme.colorScheme.primaryContainer),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.onPrimaryContainer)
 
     ) {
         val image = painterResource(id = R.drawable.play_arrow)
-        Image(painter = image, contentDescription = null, modifier = Modifier.fillMaxSize(0.5F))
+        Image(painter = image, contentDescription = null, modifier = Modifier.fillMaxSize(0.8F))
     }
 }
 

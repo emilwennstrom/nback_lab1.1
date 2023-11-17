@@ -2,6 +2,7 @@ package mobappdev.example.nback_cimpl.ui.screens
 
 import android.content.res.Configuration
 import android.speech.tts.TextToSpeech
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -32,6 +33,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import mobappdev.example.nback_cimpl.R
+import mobappdev.example.nback_cimpl.ui.theme.Orange
 import mobappdev.example.nback_cimpl.ui.viewmodels.GameViewModel
 
 private const val TAG = "GameScreen"
@@ -54,7 +56,8 @@ fun GameScreen(
 
 
     if (gameState.audioEventValue != -1 && vm.audioGameMode.collectAsState().value) {
-        val character: String = gameState.audioEventValue.toString()
+        val character: String = (gameState.audioEventValue + 0x60).toChar().toString()
+        Log.d(TAG, character)
         if (vm.playSound.collectAsState().value)
             speak(character, textToSpeech)
     }
@@ -284,7 +287,7 @@ fun VisualGrid(
                                 modifier = modifier
                                     .aspectRatio(1F)
                                     .clip(shape = RoundedCornerShape(15.dp))
-                                    .background(MaterialTheme.colorScheme.onPrimaryContainer)
+                                    .background(Orange)
                             )
                         } else {
                             Box(
