@@ -1,4 +1,4 @@
-An implementation of a N-Back game using open skeleton code as a starter.
+An implementation of a N-Back game using open skeleton code by <a href=https://github.com/yeetivity>Yeetivity</a> as a starter.
 
 Possible to choose dual N-back. Highscore and settings persists in local preferences key-value storage.
 
